@@ -6,7 +6,7 @@
     "dev": "nodemon ./src/app.js",
     "test": "jest --watch -o --silent --colors --noStackTrace",
     "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace",
-    "test:ci": "jest --coverage"
+    "test:ci": "jest --coverage --noStackTrace --silent"
   },
   "standard": {
     "env": [
