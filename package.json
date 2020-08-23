@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "nodemon ./src/app.js",
     "test": "jest --watchAll",
-    "test:staged": "jest"
+    "test:staged": "jest --passWithNoTests"
   },
   "standard": {
-    "env": ["jest"]
+    "env": [
+      "jest"
+    ]
   },
   "lint-staged": {
     "*.js": [
