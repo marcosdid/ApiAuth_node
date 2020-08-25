@@ -23,10 +23,12 @@ module.exports = class AuthUseCase {
     }
 
     const isValid = await this.escrypter.compare(password, user.password)
+
     if (!isValid) {
       return null
     }
 
-    await this.tokenGenerator.generate(user.id)
+    const accessToken = await this.tokenGenerator.generate(user.id)
+    return accessToken
   }
 }
