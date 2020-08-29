@@ -1,8 +1,9 @@
 {
   "name": "authNode_api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "scripts": {
+    "start": "node src/main/index.js",
     "dev": "nodemon ./src/app.js",
     "test": "jest --colors --noStackTrace --passWithNoTests --detectOpenHandles",
     "test:unit": "yarn test -- --watch -o -c jest-unit-config.js",
@@ -38,7 +39,8 @@
     "lint-staged": "^10.2.11",
     "nodemon": "^2.0.4",
     "standard": "^14.3.4",
-    "sucrase": "^3.15.0"
+    "sucrase": "^3.15.0",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
