@@ -8,7 +8,7 @@ module.exports = {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
-    this.db = this.client.db(dbName)
+    this.db = this.client.db()
   },
 
   async disconnect () {
@@ -18,8 +18,8 @@ module.exports = {
   },
 
   async getDb () {
-    if (!this.cliente || !this.client.isConnected()) {
-      await this.connect(this.uri, this.dbName)
+    if (!this.client || !this.client.isConnected()) {
+      await this.connect(this.uri)
     }
 
     return this.db
