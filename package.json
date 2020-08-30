@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node src/main/index.js",
     "dev": "nodemon ./src/app.js",
-    "test": "jest --colors --noStackTrace --passWithNoTests --detectOpenHandles",
+    "test": "jest --colors --noStackTrace --passWithNoTests --detectOpenHandles --runInBand",
     "test:unit": "yarn test -- --watch -o -c jest-unit-config.js",
     "test:integration": "yarn test -- --watch -o -c jest-integration-config.js",
     "test:staged": "yarn test - -silent --forceExit",
