@@ -5,11 +5,11 @@
   "scripts": {
     "start": "node src/main/index.js",
     "dev": "nodemon ./src/app.js",
-    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
-    "test:unit": "yarn test -- --watch -o -c jest-unit-config.js",
-    "test:integration": "yarn test -- --watch -o -c jest-integration-config.js",
-    "test:staged": "yarn test - -silent",
-    "test:ci": "yarn test -- --coverage --silent —clearCache"
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand --forceExit",
+    "test:unit": "yarn test -- --watch -c jest-unit-config.js",
+    "test:integration": "yarn test -- --watch -c jest-integration-config.js",
+    "test:staged": "yarn test - --findRelatedTests -silent",
+    "test:ci": "yarn test -- --coverage --silent "
   },
   "standard": {
     "env": [
